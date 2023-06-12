@@ -1,0 +1,21 @@
+{
+  "name": "中小学教材PDF下载",
+  "description": "从教育部网站下载各版本的中小学教材PDF",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "/images/icon16.png",
+    "32": "/images/icon32.png",
+    "48": "/images/icon48.png",
+    "128": "/images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://www.zxx.edu.cn/tchMaterial/*",
+        "https://basic.smartedu.cn/tchMaterial/*"
+      ]
+    }
+  ]
+}
