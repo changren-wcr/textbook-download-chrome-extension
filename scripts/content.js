@@ -17,8 +17,11 @@ function myMain() {
             console.log("pdf name:", pdf_name, "pdf url:", pdf_url);
             const button = document.createElement('button');
             button.textContent = "在新标签页打开PDF文件"
+            const regex = /file=(.*?)&/;
+            const match = regex.exec(pdf_url);
+            const final_url = match[1];
             button.onclick = function () {
-                window.open(pdf_url);
+                window.open(final_url);
             };
             document.querySelector('h3').insertAdjacentElement('afterend', button);
         }
